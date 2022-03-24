@@ -1,0 +1,17 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "Typescript for my YouTube Channel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "Edwin Villacis",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.23"
+  }
+}
