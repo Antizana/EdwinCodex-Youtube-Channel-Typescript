@@ -1,4 +1,3 @@
-//Java Code for my YouTube channel
 
 console.log("Hello World!");
 
