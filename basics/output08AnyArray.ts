@@ -23,5 +23,6 @@ document.writeln(myNumber.toString());
 var stringArray = ["", "", ""]
 // stringArray = [1, 2, 3]; error, expecting strings into the array
 
+// Any Array
 var anyArray : any[] = ["", "", ""];
 anyArray = [1, 2, 3, true];
