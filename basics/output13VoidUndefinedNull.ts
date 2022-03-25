@@ -44,11 +44,11 @@ const  myFunc1  = () : void => {
     console.log("Void Function");
 };
 
-let myVoid1 : void = void myFunc();
-myVoid = undefined;
+let myVoid1 : void = void myFunc1();
+myVoid1 = undefined;
 
 let myNull1 : null = null;
-myNull = undefined;
+myNull1 = undefined;
 
 let myUndefined1 : undefined = undefined;
 
