@@ -23,11 +23,18 @@ document.writeln(myNumber.toString());
 var stringArray = ["", "", ""]
 // stringArray = [1, 2, 3]; error, expecting strings into the array
 
-// Any Array
 var anyArray : any[] = ["", "", ""];
 anyArray = [1, 2, 3, true];
 
-var stringArray : string[] = ["Item 1", "Item 2", "Item 3"];
-var numberArray : number[] = [1, 2, 3, 4];
-var booleanArray : boolean[] = [true, false, true];
+// Tuples
+var stringAndNumberTuples : [string, number];
+stringAndNumberTuples = ["Hello", 22];
+
+// stringAndNumberTuples = [22, "Hello"] //error the first element must be string and
+// the second number
+
+// stringAndNumberTuples = ["Hello", 22, [], {}] //error types don't match
+
+// stringAndNumberTuples = ["Hello", 22, "World", 123] // error just two elements needed
+
 

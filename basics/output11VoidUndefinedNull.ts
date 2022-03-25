@@ -40,16 +40,16 @@ stringAndNumberTuples = ["Hello", 22];
 /**
  * void, undefined, null
  */
-const  myFunc  = () : void => {
+const  myFunc1  = () : void => {
     console.log("Void Function");
 };
 
-let myVoid : void = void myFunc();
+let myVoid1 : void = void myFunc();
 myVoid = undefined;
 
-let myNull : null = null;
+let myNull1 : null = null;
 myNull = undefined;
 
-let myUndefined : undefined = undefined;
+let myUndefined1 : undefined = undefined;
 
 

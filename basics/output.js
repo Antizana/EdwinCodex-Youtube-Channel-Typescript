@@ -16,3 +16,21 @@ var stringArray = ["", "", ""];
 // stringArray = [1, 2, 3]; error, expecting strings into the array
 var anyArray = ["", "", ""];
 anyArray = [1, 2, 3, true];
+// Tuples
+var stringAndNumberTuples;
+stringAndNumberTuples = ["Hello", 22];
+// stringAndNumberTuples = [22, "Hello"] //error the first element must be string and
+// the second number
+// stringAndNumberTuples = ["Hello", 22, [], {}] //error types don't match
+// stringAndNumberTuples = ["Hello", 22, "World", 123] // error just two elements needed
+/**
+ * void, undefined, null
+ */
+var myFunc = function () {
+    console.log("Void Function");
+};
+var myVoid = void myFunc();
+myVoid = undefined;
+var myNull = null;
+myNull = undefined;
+var myUndefined = undefined;
