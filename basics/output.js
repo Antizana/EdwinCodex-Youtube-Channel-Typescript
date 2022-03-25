@@ -78,3 +78,27 @@ var myCustomer = {
     name: "Edwin", country: "Germany"
 };
 showCustomer(myCustomer);
+// Classes
+var User = /** @class */ (function () {
+    function User(name, email, age) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+        console.log("user ".concat(this.name));
+    }
+    User.prototype.register = function () {
+        console.log("".concat(this.name, " is now registered"));
+    };
+    User.prototype.showAge = function () {
+        return this.age;
+    };
+    User.prototype.ageInYears = function () {
+        return this.age + ' years';
+    };
+    User.prototype.payInvoice = function () {
+        console.log("".concat(this.name, " payed the invoice."));
+    };
+    return User;
+}());
+var john = new User('John Smith', 'john@mail.com', 27);
+var mary = new User('Mary Smith', 'mary@mail.com', 26);

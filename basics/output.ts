@@ -111,3 +111,40 @@ var myCustomer: Customer = {
 }
 
 showCustomer(myCustomer);
+
+// Classes
+
+class User {
+    name: string;
+    email: string;
+    age: number;
+
+    constructor (name: string, email: string, age: number) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+
+        console.log(`user ${this.name}`);
+    }
+
+    public register() : void {
+        console.log(`${this.name} is now registered`);
+    }
+
+    public showAge() : number{
+        return this.age;
+        
+    }
+
+    private ageInYears() : string {
+        return this.age + ' years';
+    }
+
+    payInvoice(){
+        console.log(`${this.name} payed the invoice.`);
+        
+    }
+}
+
+var john = new User('John Smith', 'john@mail.com', 27);
+var mary = new User('Mary Smith', 'mary@mail.com', 26);
