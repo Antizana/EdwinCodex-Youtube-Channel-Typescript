@@ -117,12 +117,14 @@ showCustomer(myCustomer);
 class User {
     name: string;
     email: string;
-    age: number;
+    protected age: number;
+    private password: string;
 
-    constructor (name: string, email: string, age: number) {
+    constructor (name: string, email: string, age: number, password: string) {
         this.name = name;
         this.email = email;
         this.age = age;
+        this.password = password;
 
         console.log(`user ${this.name}`);
     }
@@ -146,5 +148,25 @@ class User {
     }
 }
 
-var john = new User('John Smith', 'john@mail.com', 27);
-var mary = new User('Mary Smith', 'mary@mail.com', 26);
+var john = new User('John Smith', 'john@mail.com', 27, "myPassword");
+var mary = new User('Mary Smith', 'mary@mail.com', 26, "myPassword");
+
+// Inheritance
+
+class Profile extends User{
+    id: number;
+
+    constructor(id: number, name: string, email: string, age: number, password: string){
+        super(name, email, age, password);
+        this.id = id;
+    }
+
+    payInvoice(){
+        super.payInvoice();
+    }
+}
+
+var mike = new Profile(1, "Mike", "mike@mail.com", 30, "myPassword");
+
+console.log(mike.payInvoice);
+

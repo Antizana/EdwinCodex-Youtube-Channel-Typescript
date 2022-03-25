@@ -1,4 +1,19 @@
 //TypeScript Code for my YouTube channel
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 console.log("Hello World!");
 var myString = "Hello world";
 myString = 22 + "";
@@ -80,10 +95,11 @@ var myCustomer = {
 showCustomer(myCustomer);
 // Classes
 var User = /** @class */ (function () {
-    function User(name, email, age) {
+    function User(name, email, age, password) {
         this.name = name;
         this.email = email;
         this.age = age;
+        this.password = password;
         console.log("user ".concat(this.name));
     }
     User.prototype.register = function () {
@@ -100,5 +116,20 @@ var User = /** @class */ (function () {
     };
     return User;
 }());
-var john = new User('John Smith', 'john@mail.com', 27);
-var mary = new User('Mary Smith', 'mary@mail.com', 26);
+var john = new User('John Smith', 'john@mail.com', 27, "myPassword");
+var mary = new User('Mary Smith', 'mary@mail.com', 26, "myPassword");
+// Inheritance
+var Profile = /** @class */ (function (_super) {
+    __extends(Profile, _super);
+    function Profile(id, name, email, age, password) {
+        var _this = _super.call(this, name, email, age, password) || this;
+        _this.id = id;
+        return _this;
+    }
+    Profile.prototype.payInvoice = function () {
+        _super.prototype.payInvoice.call(this);
+    };
+    return Profile;
+}(User));
+var mike = new Profile(1, "Mike", "mike@mail.com", 30, "myPassword");
+console.log(mike.payInvoice);
