@@ -37,3 +37,23 @@ var myUndefined = undefined;
 // TypeOf
 document.writeln(typeof (stringAndNumberTuples));
 document.writeln(typeof (myVoid));
+// Functions
+function sum(num1, num2) {
+    return num1 + num2;
+}
+var sumNumberString = function (num1, num2) {
+    if (typeof num1 == "string")
+        num1 = parseInt(num1);
+    if (typeof num2 == "string")
+        num2 = parseInt(num2);
+    return num1 + num2;
+};
+function getName(firstName, surName) {
+    if (surName == undefined)
+        return firstName;
+    return firstName + surName;
+}
+// void Function 
+function myVoidFunction() {
+    return;
+}

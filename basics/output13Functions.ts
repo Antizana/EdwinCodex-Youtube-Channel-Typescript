@@ -57,11 +57,11 @@ document.writeln(typeof(stringAndNumberTuples));
 document.writeln(typeof(myVoid));
 
 // Functions
-function sum(num1: number, num2: number) : number{
+function sum1(num1: number, num2: number) : number{
     return num1 +  num2
 }
 
-var sumNumberString = function(
+var sumNumberString1 = function(
     num1: number | string, 
     num2: number | string) : number {
     if (typeof num1 == "string") num1 = parseInt(num1);
@@ -69,13 +69,13 @@ var sumNumberString = function(
     return num1 + num2;
 }
 
-function getName(firstName: string, surName: string): string {
+function getName1(firstName: string, surName: string): string {
     if (surName == undefined) return firstName;
     return firstName + surName;
 }
 
 // void Function 
-function myVoidFunction(): void {
+function myVoidFunction1(): void {
     return;
 }
 
