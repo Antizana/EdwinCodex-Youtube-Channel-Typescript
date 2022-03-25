@@ -10,6 +10,7 @@ myVar = false;
 // Strings
 document.writeln(myString);
 // document.write(myNumber); //Error this function requires a String parameter
+document.writeln("<br/>");
 document.writeln(myNumber.toString());
 // Arrays
 var stringArray = ["", "", ""];
@@ -35,7 +36,9 @@ var myNull = null;
 myNull = undefined;
 var myUndefined = undefined;
 // TypeOf
+document.writeln("<br/>");
 document.writeln(typeof (stringAndNumberTuples));
+document.writeln("<br/>");
 document.writeln(typeof (myVoid));
 // Functions
 function sum(num1, num2) {
@@ -51,9 +54,27 @@ var sumNumberString = function (num1, num2) {
 function getName(firstName, surName) {
     if (surName == undefined)
         return firstName;
-    return firstName + surName;
+    return "".concat(firstName, " ").concat(surName);
 }
+document.writeln("<br/>");
+document.writeln(getName("Edwin")); //Second parameter is optional
+document.writeln("<br/>");
+document.writeln(getName("Edwin", "CodeX"));
 // void Function 
 function myVoidFunction() {
     return;
 }
+/**
+ * Interfaces
+ */
+function showCustomer(customer) {
+    console.log("".concat(customer.name, " - ").concat(customer.country));
+}
+showCustomer({ name: "Edwin", country: "Germany" });
+function showCustomer1(customer) {
+    console.log("".concat(customer.name, " - ").concat(customer.country));
+}
+var myCustomer = {
+    name: "Edwin", country: "Germany"
+};
+showCustomer(myCustomer);

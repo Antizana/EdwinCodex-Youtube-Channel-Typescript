@@ -17,6 +17,7 @@ myVar = false;
 
 document.writeln(myString)
 // document.write(myNumber); //Error this function requires a String parameter
+document.writeln("<br/>");
 document.writeln(myNumber.toString());
 
 // Arrays
@@ -53,15 +54,17 @@ myNull = undefined;
 var myUndefined : undefined = undefined;
 
 // TypeOf
+document.writeln("<br/>");
 document.writeln(typeof(stringAndNumberTuples));
+document.writeln("<br/>");
 document.writeln(typeof(myVoid));
 
 // Functions
-function sum1(num1: number, num2: number) : number{
+function sum2(num1: number, num2: number) : number{
     return num1 +  num2
 }
 
-var sumNumberString1 = function(
+var sumNumberString2 = function(
     num1: number | string, 
     num2: number | string) : number {
     if (typeof num1 == "string") num1 = parseInt(num1);
@@ -69,13 +72,42 @@ var sumNumberString1 = function(
     return num1 + num2;
 }
 
-function getName1(firstName: string, surName: string): string {
+function getName2(firstName: string, surName?: string): string { //Second parameter is optional
     if (surName == undefined) return firstName;
-    return firstName + surName;
+    return `${firstName} ${surName}`;
 }
 
+document.writeln("<br/>");
+document.writeln(getName("Edwin")); //Second parameter is optional
+document.writeln("<br/>");
+document.writeln(getName("Edwin", "CodeX"));
+
 // void Function 
-function myVoidFunction1(): void {
+function myVoidFunction2(): void {
     return;
 }
 
+/**
+ * Interfaces
+ */
+
+function showCustomer2(customer: {name: string, country: string}){
+    console.log(`${customer.name} - ${customer.country}`);
+}
+
+showCustomer2({name: "Edwin", country: "Germany"});
+
+interface Customer2 {
+    name: string;
+    country: string;
+}
+
+function showCustomer3(customer: Customer){
+    console.log(`${customer.name} - ${customer.country}`);
+}
+
+var myCustomer: Customer2 = {
+    name: "Edwin", country: "Germany"
+}
+
+showCustomer3(myCustomer);

@@ -17,7 +17,6 @@ myVar = false;
 
 document.writeln(myString)
 // document.write(myNumber); //Error this function requires a String parameter
-document.writeln("<br/>");
 document.writeln(myNumber.toString());
 
 // Arrays
@@ -54,17 +53,15 @@ myNull = undefined;
 var myUndefined : undefined = undefined;
 
 // TypeOf
-document.writeln("<br/>");
 document.writeln(typeof(stringAndNumberTuples));
-document.writeln("<br/>");
 document.writeln(typeof(myVoid));
 
 // Functions
-function sum(num1: number, num2: number) : number{
+function sum1(num1: number, num2: number) : number{
     return num1 +  num2
 }
 
-var sumNumberString = function(
+var sumNumberString1 = function(
     num1: number | string, 
     num2: number | string) : number {
     if (typeof num1 == "string") num1 = parseInt(num1);
@@ -72,42 +69,18 @@ var sumNumberString = function(
     return num1 + num2;
 }
 
-function getName(firstName: string, surName?: string): string { //Second parameter is optional
+function getName1(firstName: string, surName?: string): string { //Second parameter is optional
     if (surName == undefined) return firstName;
     return `${firstName} ${surName}`;
 }
 
 document.writeln("<br/>");
-document.writeln(getName("Edwin")); //Second parameter is optional
+document.writeln(getName1("Edwin")); //Second parameter is optional
 document.writeln("<br/>");
-document.writeln(getName("Edwin", "CodeX"));
+document.writeln(getName1("Edwin", "CodeX"));
 
 // void Function 
-function myVoidFunction(): void {
+function myVoidFunction1(): void {
     return;
 }
 
-/**
- * Interfaces
- */
-
-function showCustomer(customer: {name: string, country: string}){
-    console.log(`${customer.name} - ${customer.country}`);
-}
-
-showCustomer({name: "Edwin", country: "Germany"});
-
-interface Customer {
-    name: string;
-    country: string;
-}
-
-function showCustomer1(customer: Customer){
-    console.log(`${customer.name} - ${customer.country}`);
-}
-
-var myCustomer: Customer = {
-    name: "Edwin", country: "Germany"
-}
-
-showCustomer(myCustomer);
