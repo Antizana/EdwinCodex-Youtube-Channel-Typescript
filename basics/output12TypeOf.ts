@@ -55,4 +55,3 @@ var myUndefined : undefined = undefined;
 // TypeOf
 document.writeln(typeof(stringAndNumberTuples));
 document.writeln(typeof(myVoid));
-

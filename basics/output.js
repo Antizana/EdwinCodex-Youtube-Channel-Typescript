@@ -34,3 +34,6 @@ myVoid = undefined;
 var myNull = null;
 myNull = undefined;
 var myUndefined = undefined;
+// TypeOf
+document.writeln(typeof (stringAndNumberTuples));
+document.writeln(typeof (myVoid));
